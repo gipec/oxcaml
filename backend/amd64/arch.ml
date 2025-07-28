@@ -94,15 +94,15 @@ module Extension = struct
        disabled as they are included in baseline x86_64. *)
     | POPCNT -> Config.has_popcnt
     | CLMUL -> Config.has_pclmul
-    | LZCNT -> Config.has_lzcnt
+    | LZCNT -> false (* Config.has_lzcnt *)
     | SSE3 -> Config.has_sse3
     | SSSE3 -> Config.has_ssse3
     | SSE4_1 -> Config.has_sse4_1
     | SSE4_2 -> Config.has_sse4_2
-    | BMI -> Config.has_bmi
-    | BMI2 -> Config.has_bmi2
+    | BMI -> false (*Config.has_bmi*)
+    | BMI2 -> false (*Config.has_bmi2*)
     | AVX -> Config.has_avx
-    | AVX2 -> Config.has_avx2
+    | AVX2 -> false (*Config.has_avx2*)
     | PREFETCHW | PREFETCHWT1 | AVX512F -> false
 
   let all =
